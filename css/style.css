@@ -76,7 +76,7 @@ main {
 .profile {
   width: 604px;
   height: 307px; /* 386-79, kartinka idet naverh */
-  margin: -79px auto 0;
+  margin: -79px auto 32px;
 }
 .avatar {
   width: 160px;
@@ -116,20 +116,57 @@ main {
 #icons {
   width: 310px;
   height: 104px;
-  margin-top: 32px;
+  margin-top: 0;
   margin-left: 538px;
   margin-right: 534px;
 }
-.image-set {
+#icons a {
+  display: inline-block;
   vertical-align: middle;
   width: 100px;
   height: 104px;
-  display: inline-block;
+  border-radius: 4px;
+  background: white;
+  text-decoration: none;
+  margin: 0;
 }
-.smallIcon {
+#icons  a:hover  {
+  background: rgba(200, 200, 200, 0.2);
+}
+#icons .active{
+  background: #9C27B0;
+}
+.imageIcon {
   width: 30px;
   height: 30px;
   margin: 25px 35px 49px 35px;
+}
+#buttomStudio .imageIcon {
+  background: url("../images/studio.svg");
+}
+#buttomStudio:focus .imageIcon {
+  background: url("../images/studioHover.svg");
+}
+#buttomStudio:hover .imageIcon {
+  background: url("../images/studio.svg");
+}
+#buttomWork .imageIcon {
+  background: url("../images/work.svg");
+}
+#buttomWork:focus .imageIcon {
+  background: url("../images/workHover.svg");
+}
+#buttomWork:hover .imageIcon {
+  background: url("../images/work.svg");
+}
+#buttomFavorite .imageIcon {
+  background: url("../images/favorite.svg");
+}
+#buttomFavorite:focus .imageIcon {
+  background: url("../images/favoriteHover.svg");
+}
+#buttomFavorite:hover .imageIcon {
+  background: url("../images/favorite.svg");
 }
 .studio-text {
   font-family: Roboto;
@@ -137,8 +174,14 @@ main {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
-  color: #FFFFFF;
+  color: #555555;
   margin: -30px 29px 14px 29px;
+}
+#buttomStudio:focus .studio-text {
+  color: #FFFFFF;
+}
+#buttomStudio:hover .studio-text {
+  color: #555555;
 }
 .work-text {
   font-family: Roboto;
@@ -149,6 +192,12 @@ main {
   color: #555555;
   margin: -34px 33px 14px 33px;
 }
+#buttomWork:focus .work-text {
+  color: #FFFFFF;
+}
+#buttomWork:hover .work-text {
+  color: #555555;
+}
 .favorite-text {
   font-family: Roboto;
   font-style: normal;
@@ -158,30 +207,13 @@ main {
   color: #555555;
   margin: -34px 23px 14px 23px;
 }
-.active {
-  background: #9C27B0;
-  box-shadow: 0px 4px 20px rgba(156, 39, 176, 0.45);
-  border-radius: 4px;
+#buttomFavorite:focus .favorite-text {
+  color: #FFFFFF;
 }
-.image-set:hover {
-  background: rgba(200, 200, 200, 0.2);
-  border-radius: 4px;
-}
-#hover1 .smallIcon {
-  background: url("../images/studio.svg");
-}
-#hover1:hover .smallIcon {
-  background: url("../images/hover.svg");
-}
-#hover1:hover .studio-text {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
+#buttomFavorite:hover .favorite-text {
   color: #555555;
 }
-.photos {
+#photos {
   width: 555px;
   height: 621px;
   margin: 51px auto;
@@ -197,6 +229,7 @@ main {
   height: 197px;
   background: #C4C4C4;
   border-radius: 6px;
+  margin-bottom: 30px;
   margin-right: 12px;
 }
 .thirdPhoto {
@@ -204,7 +237,7 @@ main {
   height: 394px;
   background:  #C4C4C4;
   border-radius: 6px;
-  margin-top: 30px;
+  margin-top: 0;
   margin-right: 12px;
 }
 .secondPhoto {
@@ -213,13 +246,14 @@ main {
   background: #C4C4C4;
   border-radius: 6px;
   margin-left: 11px;
+  margin-bottom: 30px;
 }
 .fourthPhoto {
   width: 263px;
   height: 197px;
   background: #C4C4C4;
   border-radius: 6px;
-  margin-top: 30px;
+  margin-top: 0;
   margin-left: 11px;
 }
 footer {

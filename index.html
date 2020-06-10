@@ -7,6 +7,7 @@
          <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     </head>
   <body>
+    
     <header>
       <nav class="nav-bar">
           <a href="#" id="headerLogo">
@@ -32,7 +33,6 @@
         </div>
       </nav>
     </header>
-
     <main>
       <div class="whiteBg">
         <div class="profile">
@@ -50,46 +50,65 @@
           </p>
         </div>
         <nav id="icons">
-            <a href="#">
-               <div id="hover1" class="image-set active">
-                    <div class="smallIcon">
-                    </div>
-                    <p class="studio-text">
-                       STUDIO
-                     </p>
-               </div>
-            </a>
-            <a href="#">
-               <div class="image-set">
-                    <img class="smallIcon" src="images/work.svg" alt="icon2">
+             <a href="#" id="buttomStudio" class="tab-buttons active" onclick="openGallery(event, 'Studio', 'buttomStudio')">
+                   <div class="imageIcon">
+                   </div>
+                   <p class="studio-text">
+                         STUDIO
+                   </p>
+             </a>
+             <a href="#"  id="buttomWork" class="tab-buttons" onclick="openGallery(event, 'Work', 'buttomWork')">
+                   <div class="imageIcon">
+                   </div>
                     <p class="work-text">
-                       WORK
+                          WORK
                     </p>
-               </div>
-            </a>
-            <a href="#">
-               <div class="image-set">
-                    <img class="smallIcon" src="images/favorite.svg" alt="icon3">
-                    <p class="favorite-text">
-                       FAVORITE
-                    </p>
-               </div>
-            </a>
+             </a>
+             <a href="#" id="buttomFavorite" class="tab-buttons" onclick="openGallery(event, 'Favorite', 'buttomFavorite')">
+                   <div class="imageIcon">
+                   </div>
+                   <p class="favorite-text">
+                          FAVORITE
+                   </p>
+             </a>
         </nav>
-
-        <div class="photos">
-           <div class="block">
-                <img class="firstPhoto" src="images/photo1.png" alt="First photo">
-                <img class="thirdPhoto" src="images/photo3.png" alt="Third photo">
-           </div>
-           <div class="block">
-                <img class="secondPhoto" src="images/photo2.png" alt="Second photo">
-                <img class="fourthPhoto" src="images/photo4.png" alt="Fourth photo">
-           </div>
+        <div id="photos">
+            <div class="block">
+                <div id="Work" class="gallery">
+                    <img class="firstPhoto" src="images/photo1.png" alt="First photo">
+                </div>
+                <div id="Favorite" class="gallery">
+                    <img class="thirdPhoto" src="images/photo3.png" alt="Third photo">
+                </div>
+            </div>
+            <div class="block">
+                <div id="Studio" class="gallery">
+                    <img class="secondPhoto" src="images/photo2.png" alt="Second photo">
+                    <img class="fourthPhoto" src="images/photo4.png" alt="Fourth photo">
+                </div>
+            </div>
         </div>
+        <script>
+             function openGallery(event, galleryName, buttonName) {
+                  event.preventDefault()
+                  var i;
+                  var x = document.getElementsByClassName("gallery");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                  }
+
+             document.getElementById(galleryName).style.display = "block";
+                  /* Change style of buttons */
+               var x = document.getElementsByClassName("active");
+               for (i = 0; i < x.length; i++) {
+                 x[i].classList.remove("active");
+               }
+
+               document.getElementById(buttonName).classList.add("active");
+              }
+         </script>
       </div>
     </main>
-
     <footer>
         <nav id="footerLinks">
             <a href="#" class="footerLinkOne">CREATIVE TIM</a>
