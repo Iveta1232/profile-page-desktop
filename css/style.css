@@ -9,7 +9,9 @@ a {
 header {
 width: 1440px;
 height: 381px;
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/header_bg.png'), #C4C4C4;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  #C4C4C4;
+background-image: url('../images/header_bg.png');
+background-repeat: no-repeat;
 margin: 0 auto;
 }
 .nav-bar {
@@ -63,7 +65,7 @@ main {
   top: -64px;
   width: 1380px;
   height: 1195px;
-  margin: -80px auto 0 auto;
+  margin: -80px 30px 0 30px;
 }
 .whiteBg {
   width: 1380px;
@@ -71,7 +73,7 @@ main {
   background: #FFFFFF;
   box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.14), 0px 8px 10px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  margin: -50px auto 0 auto;
+  margin: -50px 0 0 0;
 }
 .profile {
   width: 604px;
@@ -217,44 +219,40 @@ main {
   width: 555px;
   height: 621px;
   margin: 51px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#photos img {
+    background: #C4C4C4;
+    border-radius: 6px;
 }
 .block {
-  vertical-align: middle;
   width: 274px;
   height: 621px;
-  display: inline-block;
+}
+.blockT {
+  width: 274px;
+  height: 621px;
+  text-align: right;
 }
 .firstPhoto {
   width: 262px;
   height: 197px;
-  background: #C4C4C4;
-  border-radius: 6px;
   margin-bottom: 30px;
-  margin-right: 12px;
 }
 .thirdPhoto {
   width: 262px;
   height: 394px;
-  background:  #C4C4C4;
-  border-radius: 6px;
-  margin-top: 0;
-  margin-right: 12px;
 }
 .secondPhoto {
   width: 263px;
   height: 351px;
-  background: #C4C4C4;
-  border-radius: 6px;
-  margin-left: 11px;
   margin-bottom: 30px;
 }
 .fourthPhoto {
   width: 263px;
   height: 197px;
-  background: #C4C4C4;
-  border-radius: 6px;
-  margin-top: 0;
-  margin-left: 11px;
 }
 footer {
   width: 1127px;
@@ -289,4 +287,86 @@ footer p {
   line-height: 14px;
   color: #333333;
   margin: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 768px;
+    height: 381px;
+    background-image: url('../images/bgHeader.png');
+  }
+  .nav-bar {
+    width: 768px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.4);
+    padding-top: 25px;
+  }
+  #headerLinks a, #headerLogo {
+    margin-left: 25px;
+  }
+  #headerLinks:last-child {
+  margin-right: 20px;
+  }
+  main {
+    width: 748px;
+    height: 3774px;
+    margin: -60px 10px 0 10px;
+  }
+  .whiteBg {
+    width: 748px;
+    height: 3774px;
+    margin: -30px 0 0 0;
+  }
+  #icons {
+    width: 310px;
+    height: 104px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #photos{
+    width: 725px;
+    height: 3213px;
+    margin: 51px auto 67px auto;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  #photos img {
+    margin-bottom: 29px;
+  }
+  #photos .fourthPhoto {
+    margin-bottom: 0;
+  }
+  .block {
+    width: 725px;
+    height: 1682px;
+  }
+  .blockT {
+    width: 725px;
+    height: 1531px;
+  }
+  .firstPhoto,
+  .fourthPhoto {
+    width: 725px;
+    height: 541px;
+  }
+  .thirdPhoto {
+    width: 725px;
+    height: 1081px;
+  }
+  .secondPhoto {
+    width: 725px;
+    height: 961px;
+  }
+  footer {
+    width: 462px;
+    height: 62px;
+    margin: 45px auto 27px 40px;
+    display: block;
+  }
+  footer p {
+    text-align: right;
+    margin-top: 30px;
+  }
 }
