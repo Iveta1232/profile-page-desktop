@@ -1,55 +1,64 @@
+$default_font_family:Roboto;
+
+@mixin default-font {
+  font-family: $default_font_family;
+  font-style: normal;
+  font-weight: normal;
+}
+@mixin default-font300 {
+  font-family: $default_font_family;
+  font-style: normal;
+  font-weight: 300;
+}
+
 body {
   max-width: 1440px;
   height: 1594px;
-  background: #CCCCCC; }
-
+  background: #CCCCCC;
+}
 a {
-  text-decoration: none; }
-
+  text-decoration: none;
+}
 header {
-  width: 1440px;
-  height: 381px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #C4C4C4;
-  background-image: url("../images/header_bg.png");
-  background-repeat: no-repeat;
-  margin: 0 auto; }
-
+width: 1440px;
+height: 381px;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  #C4C4C4;
+background-image: url('../images/header_bg.png');
+background-repeat: no-repeat;
+margin: 0 auto;
+}
 .nav-bar {
   width: 1143px;
   height: 24px;
   margin: 0 auto;
-  padding-top: 36px; }
-
+  padding-top: 36px;
+}
 #headerLogo {
   display: inline-block;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
+  @include default-font300;
   font-size: 18px;
   line-height: 21px;
-  color: #FFFFFF; }
-
+  color: #FFFFFF;
+}
 #headerLinks {
-  float: right; }
-
+  float: right;
+}
 #headerLinks .text {
   height: 15px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
+  @include default-font;
   font-size: 12px;
   line-height: 14px;
   color: #FFFFFF;
-  vertical-align: middle; }
-
+  vertical-align: middle;
+}
 .download-icon {
   width: 20px;
   height: 20px;
-  vertical-align: top; }
-
+  vertical-align: top;
+}
 #headerLinks a {
-  margin-left: 25px; }
-
+  margin-left: 25px;
+}
 #menu {
   display: none;
   vertical-align: middle;
@@ -58,23 +67,23 @@ header {
   height: 14px;
   text-align: right;
   margin-top: 5px;
-  margin-right: 25px; }
-
+  margin-right: 25px;
+}
 #menu img {
   width: 22px;
   height: 2px;
   vertical-align: top;
-  background: #FFFFFF; }
-
+  background: #FFFFFF;
+}
 #menu .one {
-  margin-top: 0; }
-
+  margin-top: 0;
+}
 #menu .two {
-  margin-top: -7px; }
-
+  margin-top: -7px;
+}
 #menu .three {
-  margin-top: -30.5px; }
-
+  margin-top: -30.5px;
+}
 .headerIcon {
   width: 18px;
   height: 23px;
@@ -84,70 +93,65 @@ header {
   font-size: 20px;
   line-height: 23px;
   color: #FFFFFF;
-  vertical-align: middle; }
-
+  vertical-align: middle;
+}
 main {
   top: -64px;
   width: 1380px;
   height: 1195px;
-  margin: -80px 30px 0 30px; }
-
+  margin: -80px 30px 0 30px;
+}
 .whiteBg {
   width: 1380px;
   height: 1195px;
   background: #FFFFFF;
   box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.14), 0px 8px 10px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  margin: -50px 0 0 0; }
-
+  margin: -50px 0 0 0;
+}
 .profile {
   width: 604px;
-  height: 307px;
-  /* 386-79, kartinka idet naverh */
-  margin: -79px auto 32px; }
-
+  height: 307px; /* 386-79, kartinka idet naverh */
+  margin: -79px auto 32px;
+}
 .avatar {
   width: 160px;
   height: 160px;
-  margin: -79px 222px 0 222px; }
-
+  margin: -79px 222px 0 222px;
+}
 .username {
   text-align: center;
-  font-family: Roboto;
+  font-family: $default_font_family;
   font-style: normal;
   font-weight: 500;
   font-size: 25.55px;
   line-height: 30px;
   color: #3C4858;
-  margin: 21px auto 0 auto; }
-
+  margin: 21px auto 0 auto;
+}
 .profession {
   text-align: center;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
+  @include default-font300;
   font-size: 14px;
   line-height: 16px;
   color: #333333;
-  margin: 17px auto 0 auto; }
-
+  margin: 17px auto 0 auto;
+}
 .description {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
+  @include default-font300;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
   color: #999999;
-  margin: 44px auto 0 auto; }
-
+  margin: 44px auto 0 auto;
+}
 #icons {
   width: 310px;
   height: 104px;
   margin-top: 0;
   margin-left: 538px;
-  margin-right: 534px; }
-
+  margin-right: 534px;
+}
 #icons a {
   display: inline-block;
   vertical-align: middle;
@@ -156,164 +160,148 @@ main {
   border-radius: 4px;
   background: white;
   text-decoration: none;
-  margin: 0; }
-
-#icons a:hover {
-  background: rgba(200, 200, 200, 0.2); }
-
-#icons .active {
-  background: #9C27B0; }
-
+  margin: 0;
+}
+#icons  a:hover  {
+  background: rgba(200, 200, 200, 0.2);
+}
+#icons .active{
+  background: #9C27B0;
+}
 .imageIcon {
   width: 30px;
   height: 30px;
-  margin: 25px 35px 49px 35px; }
-
+  margin: 25px 35px 49px 35px;
+}
 #buttomStudio .imageIcon {
-  background: url("../images/studio.svg"); }
-
+  background: url("../images/studio.svg");
+}
 #buttomStudio:focus .imageIcon {
-  background: url("../images/studioHover.svg"); }
-
+  background: url("../images/studioHover.svg");
+}
 #buttomStudio:hover .imageIcon {
-  background: url("../images/studio.svg"); }
-
+  background: url("../images/studio.svg");
+}
 #buttomWork .imageIcon {
-  background: url("../images/work.svg"); }
-
+  background: url("../images/work.svg");
+}
 #buttomWork:focus .imageIcon {
-  background: url("../images/workHover.svg"); }
-
+  background: url("../images/workHover.svg");
+}
 #buttomWork:hover .imageIcon {
-  background: url("../images/work.svg"); }
-
+  background: url("../images/work.svg");
+}
 #buttomFavorite .imageIcon {
-  background: url("../images/favorite.svg"); }
-
+  background: url("../images/favorite.svg");
+}
 #buttomFavorite:focus .imageIcon {
-  background: url("../images/favoriteHover.svg"); }
-
+  background: url("../images/favoriteHover.svg");
+}
 #buttomFavorite:hover .imageIcon {
-  background: url("../images/favorite.svg"); }
+  background: url("../images/favorite.svg");
+}
 
+@mixin default-font-icon {
+  font-family: $default_font_family;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #555555;
+}
 .studio-text {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: #555555;
-  margin: -30px 29px 14px 29px; }
-
+  @include default-font-icon;
+  margin: -30px 29px 14px 29px;
+}
 #buttomStudio:focus .studio-text {
-  color: #FFFFFF; }
-
+  color: #FFFFFF;
+}
 #buttomStudio:hover .studio-text {
-  color: #555555; }
-
+  color: #555555;
+}
 .work-text {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: #555555;
-  margin: -34px 33px 14px 33px; }
-
+  @include default-font-icon;
+  margin: -34px 33px 14px 33px;
+}
 #buttomWork:focus .work-text {
-  color: #FFFFFF; }
-
+  color: #FFFFFF;
+}
 #buttomWork:hover .work-text {
-  color: #555555; }
-
-.favorite-text {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
   color: #555555;
-  margin: -34px 23px 14px 23px; }
-
+}
+.favorite-text {
+  @include default-font-icon;
+  margin: -34px 23px 14px 23px;
+}
 #buttomFavorite:focus .favorite-text {
-  color: #FFFFFF; }
-
+  color: #FFFFFF;
+}
 #buttomFavorite:hover .favorite-text {
-  color: #555555; }
-
+  color: #555555;
+}
 #photos {
   width: 555px;
   height: 621px;
   margin: 51px auto;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
-
+  justify-content: space-between;
+}
 #photos img {
-  background: #C4C4C4;
-  border-radius: 6px; }
-
+    background: #C4C4C4;
+    border-radius: 6px;
+}
 .block {
   width: 274px;
-  height: 621px; }
-
+  height: 621px;
+}
 .blockT {
   width: 274px;
   height: 621px;
-  text-align: right; }
-
+  text-align: right;
+}
 .firstPhoto {
   width: 262px;
   height: 197px;
-  margin-bottom: 30px; }
-
+  margin-bottom: 30px;
+}
 .thirdPhoto {
   width: 262px;
-  height: 394px; }
-
+  height: 394px;
+}
 .secondPhoto {
   width: 263px;
   height: 351px;
-  margin-bottom: 30px; }
-
+  margin-bottom: 30px;
+}
 .fourthPhoto {
   width: 263px;
-  height: 197px; }
-
+  height: 197px;
+}
 footer {
   width: 1127px;
   height: 18px;
   margin: 47px 148px 0 165px;
   display: flex;
-  justify-content: space-between; }
-
+  justify-content: space-between;
+}
 #footerLinks .footerLinkOne {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: #555555;
+  @include default-font-icon;
   font-size: 12px;
   line-height: 14px;
   color: #333333;
-  margin-right: 33px; }
-
+  margin-right: 33px;
+}
 #footerLinks .footerLinkTwo {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: #555555;
+  @include default-font-icon;
   font-size: 12px;
   line-height: 14px;
   color: #000000;
-  margin-right: 33px; }
-
+  margin-right: 33px;
+}
 #footerLinks .footerLinkTwo:last-child {
-  margin-right: 0; }
-
+  margin-right: 0;
+}
 footer p {
   font-family: FontAwesome;
   font-style: normal;
@@ -321,155 +309,161 @@ footer p {
   font-size: 12px;
   line-height: 14px;
   color: #333333;
-  margin: 0; }
+  margin: 0;
+}
+
 
 @media screen and (max-width: 768px) {
   header {
     width: 768px;
     height: 381px;
-    background-image: url("../images/bgHeader.png"); }
-
+    background-image: url('../images/bgHeader.png');
+  }
   .nav-bar {
     width: 768px;
     height: 45px;
     background: rgba(0, 0, 0, 0.4);
-    padding-top: 25px; }
-
+    padding-top: 25px;
+  }
   #headerLinks a, #headerLogo {
-    margin-left: 25px; }
-
+    margin-left: 25px;
+  }
   #headerLinks .inst {
-    margin-right: 20px; }
-
+  margin-right: 20px;
+  }
   main {
     width: 748px;
     height: 3774px;
-    margin: -60px 10px 0 10px; }
-
+    margin: -60px 10px 0 10px;
+  }
   .whiteBg {
     width: 748px;
     height: 3774px;
-    margin: -30px 0 0 0; }
-
+    margin: -30px 0 0 0;
+  }
   #icons {
     width: 310px;
     height: 104px;
     margin-top: 0;
     margin-left: auto;
-    margin-right: auto; }
-
-  #photos {
+    margin-right: auto;
+  }
+  #photos{
     width: 725px;
     height: 3213px;
     margin: 51px auto 67px auto;
     align-items: flex-start;
-    flex-wrap: wrap; }
-
+    flex-wrap: wrap;
+  }
   #photos img {
-    margin-bottom: 29px; }
-
+    margin-bottom: 29px;
+  }
   #photos .fourthPhoto {
-    margin-bottom: 0; }
-
+    margin-bottom: 0;
+  }
   .block {
     width: 725px;
-    height: 1682px; }
-
+    height: 1682px;
+  }
   .blockT {
     width: 725px;
-    height: 1531px; }
-
+    height: 1531px;
+  }
   .firstPhoto,
   .fourthPhoto {
     width: 725px;
-    height: 541px; }
-
+    height: 541px;
+  }
   .thirdPhoto {
     width: 725px;
-    height: 1081px; }
-
+    height: 1081px;
+  }
   .secondPhoto {
     width: 725px;
-    height: 961px; }
-
+    height: 961px;
+  }
   footer {
     width: 462px;
     height: 62px;
     margin: 45px auto 27px 40px;
-    display: block; }
-
+    display: block;
+  }
   footer p {
     text-align: right;
-    margin-top: 30px; } }
+    margin-top: 30px;
+  }
+}
+
+
 @media screen and (max-width: 425px) {
   header {
     width: 425px;
     height: 380px;
-    background-image: url("../images/headerM.png"); }
-
+    background-image: url('../images/headerM.png');
+  }
   .nav-bar {
     width: 425px;
     height: 45px;
     background: rgba(0, 0, 0, 0.4);
-    padding-top: 25px; }
-
+    padding-top: 25px;
+  }
   #headerLogo {
-    margin-left: 25px; }
-
+    margin-left: 25px;
+  }
   #headerLinks {
-    display: none; }
-
+    display: none;
+  }
   #menu {
-    display: inline; }
-
+  display: inline;
+  }
   main {
     width: 406px;
     height: 2313px;
-    margin: -60px 10px 33px 10px; }
-
+    margin: -60px 10px 33px 10px;
+  }
   .whiteBg {
     width: 406px;
-    height: 2313px;
-    margin: -30px 0 0 0; }
-
+    height: 2313px;;
+    margin: -30px 0 0 0;
+  }
   .profile {
     width: 375px;
-    height: 347px; }
-
+    height: 347px;
+  }
   .avatar {
-    margin: -79px 122px 0 122px; }
-
-  #photos {
+    margin: -79px 122px 0 122px;
+  }
+  #photos{
     width: 378px;
     height: 1717px;
-    margin: 51px auto 65px auto; }
-
+    margin: 51px auto 65px auto;
+  }
   .block {
     width: 378px;
-    height: 840px; }
-
+    height: 840px;
+  }
   .blockT {
     width: 378px;
-    height: 880px; }
-
+    height: 880px;
+  }
   .firstPhoto,
   .fourthPhoto {
     width: 378px;
-    height: 281px; }
-
+    height: 281px;
+  }
   .thirdPhoto {
     width: 378px;
-    height: 500px; }
-
+    height: 500px;
+  }
   .secondPhoto {
     width: 378px;
-    height: 565px; }
-
+    height: 565px;
+  }
   footer {
     width: 331px;
-    margin: 33px auto 27px 40px; }
-
+    margin: 33px auto 27px 40px;
+  }
   footer p {
-    margin-right: 20px; } }
-
-/*# sourceMappingURL=style.css.map */
+    margin-right: 20px;
+  }
+}
